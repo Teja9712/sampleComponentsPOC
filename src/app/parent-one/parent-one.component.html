@@ -1,0 +1,15 @@
+<div *ngIf="show">
+        {{ messageFromTwo }} 
+</div>
+
+<app-child-one (sendData)="receivedMessage($event)"></app-child-one>
+<app-child-two  [fromOneChild]="messageOne"> </app-child-two>
+
+
+
+
+<div>
+        the message from the service aand across all components are  {{ messageFromService }}
+</div>
+
+<button (click)="changeDataAccrossComponent()"> chnge from First parent</button>
